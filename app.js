@@ -10,7 +10,7 @@ var spawn = require('child_process').spawn
 var child = spawn('pwd')
 var alert=require('alert')
 const results = [];
-const port=process.env.PORT || 3000;
+const port=process.env.PORT || 9001;
 app.use(upload());
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
