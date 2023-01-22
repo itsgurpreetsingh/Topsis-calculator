@@ -1,0 +1,22 @@
+body{
+  align-content: center;
+}
+#upload{
+  margin-left:16rem;
+}
+h1{
+  align-items: center;
+  position: absolute;
+  top:2rem;
+  margin-left:40rem;
+}
+.inputForm{
+  margin-left: 20rem;
+  margin-right:20rem;
+  margin-top:10rem;
+  margin-bottom:10rem;
+}
+.submit{
+  margin-left: 18rem;
+  margin-top: 2rem;
+}

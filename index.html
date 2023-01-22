@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Topsis</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/form.css">
+
+<body>
+  <h1>Topsis Calculator</h1>
+  <form class="inputForm" action="/" method="POST" enctype="multipart/form-data">
+    <div class="form-group row">
+      <label for="weight" class="col-sm-2 col-form-label">Weights</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control border border-dark" id="weight" placeholder="Weights" name="weight" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="impact" class="col-sm-2 col-form-label">Impacts</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control border border-dark" id="impact" placeholder="impacts" name="impact" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-2 col-form-label">Email id</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control border border-dark" id="inputEmail" placeholder="Email id" name="email" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="filename" class="col-sm-2 col-form-label">Input file</label>
+      <div class="col-sm-10">
+        <input id="fileupload" type="file" name="file" required />
+        <input type="submit" value="Submit" class="submit btn-primary">
+      </div>
+    </div>
+  </form>
+  <!-- <script src="js/file.js" charset="utf-8"></script> -->
+</body>
+
+</html>
