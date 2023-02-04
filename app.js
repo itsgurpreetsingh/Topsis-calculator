@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.get("/", function(req, res) {
-  res.sendFile("index.html");
+  res.sendFile(__dirname+"/index.html");
 });
 app.post("/", function(request, response) {
   // Reading Python files
@@ -91,11 +91,10 @@ if(flag==1){
       }
     });
     if(flag==0){
-      response.sendFile("success.html");
+      response.sendFile(__dirname+"/success.html");
     }
   });
 });
 app.listen(port, function() {
   console.log("server started");
 })
-module.exports = app;
