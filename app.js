@@ -26,14 +26,14 @@ app.post("/", function(request, response) {
   if(request.files){
     var file=request.files.file;
     fileName=file.name;
-    file.mv(__dirname+"/"+fileName,function(err){
+    file.mv('./public/'+fileName,function(err){
       if(err){
         response.send(err);
       }
     });
   }
   //spawn new child process to call the python script
-  const python = spawn('python', [__dirname+'/102003070.py', __dirname+'/'+fileName, request.body.weight, request.body.impact, __dirname+'/output.csv']);
+  const python = spawn('python', ['public/102003070.py', 'public/'+fileName, request.body.weight, request.body.impact, 'public/output.csv']);
   // collect data from script
   var dataToSend,flag=0;
   python.stdout.on('data', function(data) {
@@ -65,7 +65,7 @@ app.post("/", function(request, response) {
       subject: 'Result of topsis',
       text:'Result of Input file : ',
       attachments: [{ // utf-8 string as an attachment
-        filename:'output.csv',path: __dirname+'/output.csv'
+        filename:'output.csv',path: 'public/output.csv'
       }]
     };
 }
@@ -78,7 +78,7 @@ if(flag==1){
   };
 }
     try {
-  fs.unlinkSync(__dirname+'/'+fileName);
+  fs.unlinkSync('public/'+fileName);
   console.log("Delete File successfully.");
   } catch (error) {
   console.log(error);
